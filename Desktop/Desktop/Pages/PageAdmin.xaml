@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel>
             <Button>Сформировать отчеты</Button>
-            <Button>Проконтролировать всех пользователей по истории входа</Button>
+            <Button Name="BtnHistory" Click="BtnHistory_Click">Проконтролировать всех пользователей по истории входа</Button>
             <Button>Работать с данными о расходных материалах, используемых в пункте сбора опасных отходов</Button>
         </StackPanel>
     </Grid>

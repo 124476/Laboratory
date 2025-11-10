@@ -20,7 +20,6 @@ C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\bin\Debug\EntityFramework
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\bin\Debug\EntityFramework.xml
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Desktop.exe.config
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Desktop_Content.g.cs
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Desktop.csproj.Up2Date
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageAdmin.g.cs
@@ -31,3 +30,8 @@ C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageLabor
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageAccountant.baml
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageLaboratory.baml
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageLaboratoryResearcher.baml
+C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Windows\WindowCaptcha.g.cs
+C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Windows\WindowCaptcha.baml
+C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageHistory.g.cs
+C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Pages\PageHistory.baml
+C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\obj\Debug\Desktop.exe.config

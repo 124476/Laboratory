@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LaboratoriaDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LoggingUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK_LoggingUser_User" FromRole="LoggingUser" ToRole="User" />
+  </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
@@ -89,6 +98,7 @@
     <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="WordId" Type="Int32" />
     <Property Name="LastDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="LoggingUser" Relationship="Self.FK_LoggingUser_User" FromRole="User" ToRole="LoggingUser" />
     <NavigationProperty Name="Role" Relationship="Self.FK_User_Role1" FromRole="User" ToRole="Role" />
     <NavigationProperty Name="Work" Relationship="Self.FK_User_Work" FromRole="User" ToRole="Work" />
     <NavigationProperty Name="UserOrderService" Relationship="Self.FK_UserOrderService_User" FromRole="User" ToRole="UserOrderService" />
@@ -127,6 +137,18 @@
     <Property Name="BIK" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="User" Relationship="Self.FK_User_Work" FromRole="Work" ToRole="User" />
   </EntityType>
+  <Association Name="FK_LoggingUser_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="LoggingUser" Type="Self.LoggingUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoggingUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Order_StatusOrder">
     <End Role="StatusOrder" Type="Self.StatusOrder" Multiplicity="0..1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
@@ -235,7 +257,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="LaboratoriaDatabaseEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="LaboratoriaDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LoggingUser" EntityType="Self.LoggingUser" />
     <EntitySet Name="Order" EntityType="Self.Order" />
     <EntitySet Name="OrderServices" EntityType="Self.OrderServices" />
     <EntitySet Name="Role" EntityType="Self.Role" />
@@ -247,6 +270,10 @@
     <EntitySet Name="UserOrderService" EntityType="Self.UserOrderService" />
     <EntitySet Name="Utilizer" EntityType="Self.Utilizer" />
     <EntitySet Name="Work" EntityType="Self.Work" />
+    <AssociationSet Name="FK_LoggingUser_User" Association="Self.FK_LoggingUser_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="LoggingUser" EntitySet="LoggingUser" />
+    </AssociationSet>
     <AssociationSet Name="FK_Order_StatusOrder" Association="Self.FK_Order_StatusOrder">
       <End Role="StatusOrder" EntitySet="StatusOrder" />
       <End Role="Order" EntitySet="Order" />

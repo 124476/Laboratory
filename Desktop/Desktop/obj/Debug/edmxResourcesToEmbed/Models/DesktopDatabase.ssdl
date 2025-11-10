@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Хранилище LaboratoriaDatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LoggingUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+  </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
@@ -109,6 +117,18 @@
     <Property Name="RS" Type="nvarchar" MaxLength="150" />
     <Property Name="BIK" Type="nvarchar" MaxLength="150" />
   </EntityType>
+  <Association Name="FK_LoggingUser_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="LoggingUser" Type="Self.LoggingUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoggingUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Order_StatusOrder">
     <End Role="StatusOrder" Type="Self.StatusOrder" Multiplicity="0..1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
@@ -218,6 +238,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Хранилище LaboratoriaDatabaseModelContainer">
+    <EntitySet Name="LoggingUser" EntityType="Self.LoggingUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OrderServices" EntityType="Self.OrderServices" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
@@ -229,6 +250,10 @@
     <EntitySet Name="UserOrderService" EntityType="Self.UserOrderService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Utilizer" EntityType="Self.Utilizer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Work" EntityType="Self.Work" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_LoggingUser_User" Association="Self.FK_LoggingUser_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="LoggingUser" EntitySet="LoggingUser" />
+    </AssociationSet>
     <AssociationSet Name="FK_Order_StatusOrder" Association="Self.FK_Order_StatusOrder">
       <End Role="StatusOrder" EntitySet="StatusOrder" />
       <End Role="Order" EntitySet="Order" />

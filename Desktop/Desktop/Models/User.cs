@@ -17,6 +17,7 @@ namespace Desktop.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
+            this.LoggingUser = new HashSet<LoggingUser>();
             this.UserOrderService = new HashSet<UserOrderService>();
         }
     
@@ -36,6 +37,8 @@ namespace Desktop.Models
         public Nullable<int> WordId { get; set; }
         public Nullable<System.DateTime> LastDate { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LoggingUser> LoggingUser { get; set; }
         public virtual Role Role { get; set; }
         public virtual Work Work { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

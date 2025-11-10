@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище LaboratoriaDatabaseModelContainer" CdmEntityContainer="LaboratoriaDatabaseEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище LaboratoriaDatabaseModelContainer" CdmEntityContainer="LaboratoriaDatabaseEntities1">
+    <EntitySetMapping Name="LoggingUser">
+      <EntityTypeMapping TypeName="LaboratoriaDatabaseModel.LoggingUser">
+        <MappingFragment StoreEntitySet="LoggingUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Order">
       <EntityTypeMapping TypeName="LaboratoriaDatabaseModel.Order">
         <MappingFragment StoreEntitySet="Order">

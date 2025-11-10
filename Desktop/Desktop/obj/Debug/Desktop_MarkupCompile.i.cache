@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\source\repos\Laboratoria\Desktop\Desktop\App.xaml
-6-1087472892
+8473572944
 21857272923
-254713401
+28-1295147141
 18-1617647285
-MainWindow.xaml;Pages\PageAccountant.xaml;Pages\PageAdmin.xaml;Pages\PageLaboratory.xaml;Pages\PageLaboratoryResearcher.xaml;Pages\PageLogin.xaml;
+MainWindow.xaml;Pages\PageAccountant.xaml;Pages\PageAdmin.xaml;Pages\PageHistory.xaml;Pages\PageLaboratory.xaml;Pages\PageLaboratoryResearcher.xaml;Pages\PageLogin.xaml;Windows\WindowCaptcha.xaml;
 
-True
+False
 

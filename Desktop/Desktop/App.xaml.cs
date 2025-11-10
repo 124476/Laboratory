@@ -14,7 +14,7 @@ namespace Desktop
     /// </summary>
     public partial class App : Application
     {
-        public static LaboratoriaDatabaseEntities DB = new LaboratoriaDatabaseEntities();
+        public static LaboratoriaDatabaseEntities1 DB = new LaboratoriaDatabaseEntities1();
         public static User User { get; set; }
         public App()
         {

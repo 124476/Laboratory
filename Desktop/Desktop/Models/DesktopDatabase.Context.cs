@@ -13,10 +13,10 @@ namespace Desktop.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LaboratoriaDatabaseEntities : DbContext
+    public partial class LaboratoriaDatabaseEntities1 : DbContext
     {
-        public LaboratoriaDatabaseEntities()
-            : base("name=LaboratoriaDatabaseEntities")
+        public LaboratoriaDatabaseEntities1()
+            : base("name=LaboratoriaDatabaseEntities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace Desktop.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<LoggingUser> LoggingUser { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderServices> OrderServices { get; set; }
         public virtual DbSet<Role> Role { get; set; }

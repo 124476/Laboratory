@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Desktop.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageLaboratoryResearcher">
+      Title="PageLaboratoryResearcher"
+      Unloaded="Page_Unloaded">
 
     <Grid>
         <StackPanel>

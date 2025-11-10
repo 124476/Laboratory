@@ -24,5 +24,10 @@ namespace Desktop.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnHistory_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageHistory());
+        }
     }
 }
