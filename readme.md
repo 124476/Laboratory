@@ -6,7 +6,7 @@
 
 
 
-!\[ER Diagram](imgs/er.png)
+![ER Diagram](imgs/er.png)
 
 
 
@@ -18,21 +18,21 @@
 
 
 
-!\[CAPTCHA Example](imgs/captcha.png)
+![CAPTCHA Example](imgs/captcha.png)
 
 
 ## Интерфейс таймера
 
 
 
-!\[Timer Interface](imgs/timer.png)
+![Timer Interface](imgs/timer.png)
 
 
 ## История входа
 
 
 
-!\[Timer Interface](imgs/history.png)
+![Timer Interface](imgs/history.png)
 
 
 ## Установка и запуск
@@ -41,7 +41,7 @@
 
 ```
 
-сами установите -\_-
+сами установите -_-
 
 ```
 
